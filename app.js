@@ -18,7 +18,7 @@ const api = {
         const { temp, humidity } = data.main
         const { icon, description } = data.weather[0]
 
-        const fahrenheitToCelsius = Math.ceil(temp - 273)
+        const fahrenheitToCelsius = (temp - 273).toFixed(0)
 
         document.querySelector(".city").innerHTML = `Weather in ${cityName}`
         document.querySelector(".temp").innerHTML = fahrenheitToCelsius + "°C"
